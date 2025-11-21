@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Étape 5</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <img src="LogoT_DdD_Noir.png" class="logo">
+    <h1>Route des Vins – Étape 5</h1>
+</header>
+
+<div class="content parchment">
+    <h2>Énigme</h2>
+    <p>Je suis une ligne invisible qui dit l’âge d’un vin. Qui suis-je ?</p>
+
+    <input id="answer" placeholder="Votre réponse…" 
+           onkeydown="if(event.key==='Enter'){checkAnswer(5);}">
+    <button onclick="checkAnswer(5);">Valider</button>
+
+    <p id="feedback"></p>
+
+    <div class="nav">
+        <a href="step04.html">← Étape précédente</a> &nbsp;&nbsp; <a href="step06.html">Étape suivante →</a>
+    </div>
+</div>
+
+</body>
+</html>
