@@ -58,3 +58,9 @@ button:hover {
     color: #ffd89b;
     font-size: 1.1em;
 }
+.subtitle {
+    font-size: 1.3em;
+    color: #e9c48c;
+    margin-top: -10px;
+    text-shadow: 0 0 6px #3d0000;
+}
