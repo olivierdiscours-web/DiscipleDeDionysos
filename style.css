@@ -23,14 +23,20 @@ header h1 {
 .parchment {
     background: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/Old_paper_texture_03.jpg');
     background-size: cover;
-    display: inline-block;
+    display: block;
     padding: 30px;
     margin: 30px auto;
     border: 3px solid #4a2b29;
     border-radius: 10px;
     width: 80%;
     max-width: 900px;
+
+    /* corrections essentielles */
+    min-height: 400px;
+    overflow: visible;
+    box-sizing: border-box;
 }
+
 
 input {
     padding: 10px;
