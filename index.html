@@ -26,4 +26,25 @@
 
     <p>
         Chaque réponse juste te fera avancer.  
-        Chaque erreur te rappellera l’humilité nécessaire à qui veut
+        Chaque erreur te rappellera l’humilité nécessaire à qui veut comprendre la vigne.
+    </p>
+
+    <p style="margin-top:25px;">
+        Lorsque tu cliqueras sur “Commencer”, ton score sera remis à zéro.
+    </p>
+
+    <button onclick="localStorage.score = 0; window.location='step01.html';">
+        🍇 Commencer la Route des Vins
+    </button>
+
+    <p style="margin-top:20px; font-size:0.9em;">
+        Dernier score enregistré : <b><span id="lastScore"></span></b>
+    </p>
+</div>
+
+<script>
+document.getElementById("lastScore").innerText = localStorage.score || 0;
+</script>
+
+</body>
+</html>
