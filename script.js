@@ -1,4 +1,3 @@
-
 // Score stocké localement
 if (!localStorage.score) localStorage.score = 0;
 
@@ -24,12 +23,27 @@ function playSound() {
 
 // Vérification
 function checkAnswer(n) {
+
+    // Empêcher validation multiple
+    if (localStorage.getItem("solved_step_" + n) === "true") {
+        document.getElementById("feedback").innerHTML =
+            "✔ Étape déjà validée (score inchangé)";
+        return;
+    }
+
     let val = document.getElementById("answer").value.toLowerCase().trim();
+
     if (val === answers[n]) {
         playSound();
+
+        // Score + verrouillage de l'étape
         localStorage.score = parseInt(localStorage.score) + 1;
-        document.getElementById("feedback").innerHTML = "✔ Bonne réponse ! Score : " + localStorage.score;
+        localStorage.setItem("solved_step_" + n, "true");
+
+        document.getElementById("feedback").innerHTML =
+            "✔ Bonne réponse ! Score : " + localStorage.score;
     } else {
-        document.getElementById("feedback").innerHTML = "❌ Mauvaise réponse…";
+        document.getElementById("feedback").innerHTML =
+            "❌ Mauvaise réponse…";
     }
 }
